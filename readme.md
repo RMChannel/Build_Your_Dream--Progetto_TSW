@@ -36,10 +36,30 @@ Project-Build_Your_Dream/
 ├── src/
 │   └── main/
 │       ├── java/
-│       │   └── Controller/         # Servlet Java (Accessori, Pezzi, Home, ecc.)
+│       │   ├── Controller/         # Servlet Java
+│       │   ├── Database/           # Gestione database
+│       │   ├── Foto/               # Gestione immagini
+│       │   └── Model/              # Modelli dati
 │       └── webapp/
-│           ├── jsp/                # File JSP per le varie sezioni
-│           └── assets/             # CSS, JS, immagini
+│           ├── accessori/          # Pagine accessori
+│           ├── admin/              # Area amministrazione
+│           ├── builder/            # PC Builder
+│           ├── carrello/           # Carrello acquisti
+│           ├── components/         # Componenti PC
+│           ├── contactUs/          # Contatti
+│           ├── errors/             # Pagine errore
+│           ├── media/              # File multimediali
+│           ├── orders/             # Gestione ordini
+│           ├── pezzi/              # Componenti singoli
+│           ├── prebuilt/           # PC preassemblati
+│           ├── privacy/            # Privacy policy
+│           ├── table_page/         # Tabelle dati
+│           ├── user/               # Area utente
+│           └── WEB-INF/            # Configurazioni web
+│               ├── bloccato.jsp
+│               ├── categoryStyle.css
+│               ├── home.css
+│               └── index.jsp
 │
 ├── pom.xml                         # Configurazione Maven
 ├── .mvn/                           # Wrapper Maven
