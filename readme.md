@@ -11,7 +11,7 @@
 - **Apache Tomcat 11**
 - **JSP / HTML / CSS / JavaScript**
 - **Maven** per la gestione delle dipendenze
-- **MySQL** (opzionale per autenticazione/registrazione, se implementato)
+- **MySQL** per il Database
 
 ---
 
@@ -98,12 +98,6 @@ Project-Build_Your_Dream/
    ```
    http://localhost:8080/Project-Build_Your_Dream
    ```
-
----
-
-## 🧪 Testing
-
-Il progetto è compatibile con **JUnit 5.11.0**, ma i test automatizzati non sono ancora inclusi. Si consiglia l'integrazione futura di test per controller e moduli di login/registrazione.
 
 ---
 
