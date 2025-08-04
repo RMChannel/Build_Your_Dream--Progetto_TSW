@@ -1,0 +1,149 @@
+.non-disponibile {
+    color: #c0392b;
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 1.08em;
+    letter-spacing: 1px;
+}
+/* product.css */
+body {
+    background: linear-gradient(120deg, #f8fafc 0%, #e3e6ed 100%);
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+    color: #222;
+    margin: 0;
+    padding: 0;
+}
+
+#product-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 40px;
+    gap: 40px;
+}
+
+#product-img {
+    max-width: 350px;
+    max-height: 350px;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px #bfc8e2;
+    border: 2px solid #e3e6ed;
+    background: #fff;
+    transition: transform 0.2s;
+}
+#product-img:hover {
+    transform: scale(1.04);
+    box-shadow: 0 8px 24px #bfc8e2;
+}
+
+.product-details {
+    min-width: 320px;
+    max-width: 520px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px #dbe3f7;
+    padding: 32px 28px;
+    margin-bottom: 32px;
+    border: 1px solid #e3e6ed;
+}
+.product-details h2 {
+    font-size: 2.1em;
+    margin-bottom: 18px;
+    color: #2a3a5e;
+    letter-spacing: 1px;
+}
+.product-details .descrizione {
+    margin-bottom: 22px;
+    font-size: 1.15em;
+    color: #444;
+    background: #f4f7fb;
+    border-radius: 8px;
+    padding: 12px 16px;
+    box-shadow: 0 1px 4px #e3e6ed;
+}
+.product-details ul {
+    list-style: none;
+    padding: 0;
+}
+
+.acquista {
+    padding: 12px 28px;
+    font-size: 1.1em;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    margin-top: 18px;
+}
+.acquista:enabled {
+    background: linear-gradient(90deg, #43ea7a 0%, #1fa64a 100%);
+    color: #fff;
+    box-shadow: 0 2px 12px rgba(67,234,122,0.15);
+}
+.acquista:enabled:hover {
+    background: linear-gradient(90deg, #1fa64a 0%, #43ea7a 100%);
+    box-shadow: 0 4px 16px rgba(67,234,122,0.25);
+}
+.acquista:disabled {
+    background: linear-gradient(90deg, #e74c3c 0%, #c0392b 100%);
+    color: #fff;
+    cursor: not-allowed;
+    opacity: 0.85;
+    box-shadow: 0 2px 8px rgba(231,76,60,0.15);
+}
+
+.product-details li {
+    font-size: 1.08em;
+    margin-bottom: 10px;
+    padding: 7px 0;
+    border-bottom: 1px solid #e3e6ed;
+}
+.product-details li:last-child {
+    border-bottom: none;
+}
+.product-details b {
+    color: #2a3a5e;
+}
+
+.sconto {
+    color: #388e3c;
+    font-weight: bold;
+    background: #ffeaea;
+    border-radius: 6px;
+    padding: 2px 8px;
+    margin-left: 4px;
+    font-size: 1em;
+    letter-spacing: 1px;
+    box-shadow: 0 1px 4px #f8bcbc33;
+}
+
+.prezzo-barrato {
+    text-decoration: line-through;
+    color: #888;
+    font-size: 0.95em;
+}
+.prezzo-scontato {
+    color: #d32f2f;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+.prezzo-normale {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+@media (max-width: 900px) {
+    #product-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+    }
+    .product-details {
+        padding: 24px 12px;
+        min-width: 220px;
+        max-width: 98vw;
+    }
+}

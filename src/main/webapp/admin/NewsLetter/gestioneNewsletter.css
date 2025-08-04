@@ -1,0 +1,38 @@
+/* Stile per la tabella delle email newsletter in admin */
+.newsletter-table-container {
+    max-width: 520px;
+    margin: 80px auto 0 auto;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,31,63,0.10);
+    padding: 36px 32px 32px 32px;
+    font-family: 'Montserrat', 'Segoe UI', 'Poppins', 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
+}
+.newsletter-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 18px;
+}
+.newsletter-table th, .newsletter-table td {
+    padding: 12px 10px;
+    border-bottom: 1px solid #e3eafc;
+    text-align: left;
+    font-size: 1.08em;
+    font-family: 'Montserrat', 'Segoe UI', 'Poppins', 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
+}
+.newsletter-table th {
+    color: #0074D9;
+    font-weight: 700;
+    background: #e3eafc;
+}
+.newsletter-table tr:last-child td {
+    border-bottom: none;
+}
+.newsletter-title {
+    text-align: center;
+    font-size: 2em;
+    font-weight: 800;
+    color: #001f3f;
+    margin-bottom: 18px;
+    font-family: 'Montserrat', 'Segoe UI', 'Poppins', 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
+}

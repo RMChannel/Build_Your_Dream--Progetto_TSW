@@ -1,0 +1,27 @@
+/* Stili per l'accessibilità */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* Assicura che gli elementi con focus siano visibili per utenti di tastiera */
+:focus {
+    outline: 2px solid #4a90e2;
+    outline-offset: 2px;
+}
+
+/* Migliora il contrasto per elementi interattivi con hover */
+input:hover, select:hover, button:hover {
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Assicura che i pulsanti siano facilmente riconoscibili */
+button, input[type="submit"], input[type="button"] {
+    cursor: pointer;
+}

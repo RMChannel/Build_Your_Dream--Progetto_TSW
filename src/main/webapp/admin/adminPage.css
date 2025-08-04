@@ -1,0 +1,190 @@
+/* Stile moderno e accattivante per la pagina admin a quadranti, con colori blu e dettagli animati */
+body {
+    background: linear-gradient(120deg, #e3eafc 0%, #b3c6e7 100%);
+    min-height: 100vh;
+}
+
+.admin-quadrants-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 36px;
+    padding: 40px 0 60px 0;
+    width: 92%;
+    margin: 0 auto;
+    max-width: 1200px;
+    font-family: 'Segoe UI', 'Montserrat', 'Poppins', 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.admin-quadrant {
+    background: linear-gradient(135deg, #e3eafc 60%, #f5f8ff 100%);
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0,31,63,0.10), 0 1.5px 0 #0074D9 inset;
+    padding: 38px 24px 28px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: box-shadow 0.25s, transform 0.18s, border 0.2s;
+    min-height: 210px;
+    border: 2.5px solid #e3eafc;
+    position: relative;
+    overflow: hidden;
+    font-family: 'Montserrat', 'Segoe UI', 'Poppins', 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.admin-quadrant::before {
+    content: '';
+    position: absolute;
+    top: -40px; left: -40px;
+    width: 90px; height: 90px;
+    background: radial-gradient(circle, #0074D9 0%, #001f3f00 80%);
+    opacity: 0.13;
+    z-index: 0;
+}
+
+.admin-quadrant:hover {
+    box-shadow: 0 8px 32px rgba(0,31,63,0.18), 0 2px 0 #0074D9 inset;
+    border: 2.5px solid #0074D9;
+    transform: translateY(-6px) scale(1.025);
+}
+
+.admin-quadrant-title {
+    font-size: 1.28em;
+    font-weight: 700;
+    color: #001f3f;
+    margin-bottom: 16px;
+    text-align: center;
+    letter-spacing: 1px;
+    z-index: 1;
+    font-family: 'Poppins', 'Montserrat', 'Segoe UI', 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.admin-quadrant-desc {
+    font-size: 1.05em;
+    color: #2c3e50;
+    margin-bottom: 26px;
+    text-align: center;
+    z-index: 1;
+    font-family: 'Montserrat', 'Segoe UI', 'Poppins', 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.12em;
+}
+
+.admin-quadrant-btn {
+    background: linear-gradient(90deg, #0074D9 60%, #001f3f 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 28px;
+    font-size: 1.08em;
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: 0 2px 12px rgba(0,31,63,0.13);
+    transition: background 0.18s, box-shadow 0.18s, transform 0.13s;
+    z-index: 1;
+    outline: none;
+    font-family: 'Poppins', 'Montserrat', 'Segoe UI', 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 0.5px;
+}
+
+.admin-quadrant-btn:hover, .admin-quadrant-btn:focus {
+    background: linear-gradient(90deg, #001f3f 60%, #0074D9 100%);
+    box-shadow: 0 6px 20px rgba(0,31,63,0.18);
+    transform: scale(1.06);
+}
+
+.admin-title {
+    text-align: center;
+    margin-top: 32px;
+    margin-bottom: 10px;
+    font-size: 2.3em;
+    font-family: 'Poppins', 'Montserrat', 'Segoe UI', 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
+    color: #001f3f;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    background: linear-gradient(90deg, #0074D9 30%, #001f3f 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.admin-back-btn {
+    display: inline-flex;
+    align-items: center;
+    position: absolute;
+    top: 28px;
+    left: 38px;
+    background: #fff;
+    color: #0074D9;
+    border: 2px solid #0074D9;
+    border-radius: 8px;
+    padding: 7px 18px 7px 10px;
+    font-size: 1.08em;
+    font-family: 'Poppins', 'Montserrat', 'Segoe UI', 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 2px 10px rgba(0,31,63,0.07);
+    transition: background 0.18s, color 0.18s, border 0.18s, box-shadow 0.18s;
+    z-index: 10;
+}
+
+.admin-back-btn:hover {
+    background: #0074D9;
+    color: #fff;
+    border: 2px solid #001f3f;
+    box-shadow: 0 4px 18px rgba(0,31,63,0.13);
+}
+
+/* Stile tabella gestione headset admin */
+.admin-table {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,31,63,0.08);
+    margin: 32px auto;
+    padding: 24px 32px;
+    width: 98%;
+    max-width: 1200px;
+}
+.admin-table th, .admin-table td {
+    padding: 10px 14px;
+    text-align: center;
+}
+.admin-table input[type="text"], .admin-table input[type="number"] {
+    width: 90%;
+    padding: 5px 8px;
+    border-radius: 6px;
+    border: 1px solid #b3c6e7;
+    background: #f5f8ff;
+}
+.admin-btn {
+    background: #0074D9;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 16px;
+    margin: 0 2px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.18s;
+}
+.admin-btn.delete {
+    background: #ff4136;
+}
+.admin-btn:hover {
+    filter: brightness(1.08);
+}
+
+@media (max-width: 700px) {
+    .admin-quadrants-container {
+        grid-template-columns: 1fr;
+        gap: 22px;
+        padding: 18px 0 30px 0;
+    }
+    .admin-quadrant {
+        padding: 22px 10px 16px 10px;
+    }
+    .admin-back-btn {
+        top: 12px;
+        left: 10px;
+        padding: 6px 12px 6px 7px;
+        font-size: 0.98em;
+    }
+}

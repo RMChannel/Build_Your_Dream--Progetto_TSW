@@ -1,0 +1,217 @@
+/* Dettagli ordine - conferma */
+.order-section.order-details-box {
+    margin-top: 30px;
+    background: var(--light-bg);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    padding: 22px 20px 10px 20px;
+}
+.order-details-title {
+    color: #1a535c;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+.order-details-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.order-details-col {
+    flex: 1 1 220px;
+    min-width: 220px;
+}
+.order-details-col.address {
+    flex: 2 1 320px;
+    min-width: 260px;
+}
+.order-details-row {
+    margin-bottom: 8px;
+}
+.order-form.button.confirm-orders {
+    min-width: 260px;
+}
+/* Conferma ordine - personalizzazioni */
+.order-section.confirm-box {
+    background: var(--light-bg);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    padding: 25px 20px 10px 20px;
+}
+.order-title .fa-check-circle {
+    color: var(--primary-color);
+    margin-right: 10px;
+}
+.order-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.order-section .order-products-title {
+    color: #1a535c;
+    font-size: 1.5rem;
+    margin-bottom: 18px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    text-shadow: 0 2px 8px #e0e0e0;
+    background: linear-gradient(90deg, #4ecdc4 0%, #1a535c 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.order-table.cart-list.data-table {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.cart-summary-section.confirm-summary {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 18px;
+}
+.cart-total.confirm-total {
+    font-size: 1.25rem;
+    color: #fff;
+    background: linear-gradient(90deg, #4ecdc4 0%, #1a535c 100%);
+    padding: 12px 28px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border: 2px solid #4ecdc4;
+}
+.cart-total-value.confirm-value {
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.3em;
+    margin-left: 8px;
+}
+.order-section.confirm-actions {
+    text-align: center;
+    margin-top: 10px;
+}
+.order-form.button.confirm-home, .order-form.button.confirm-orders {
+    min-width: 180px;
+    padding: 13px 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 25px;
+    border: none;
+    box-shadow: 0 4px 18px 0 rgba(76,205,196,0.15);
+    transition: background 0.25s, color 0.25s, transform 0.15s;
+    margin: 0 8px;
+    letter-spacing: 0.5px;
+    background: linear-gradient(90deg, #4ecdc4 0%, #1a535c 100%);
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+.order-form.button.confirm-home:hover, .order-form.button.confirm-orders:hover {
+    background: linear-gradient(90deg, #1a535c 0%, #4ecdc4 100%);
+    color: #fff;
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 8px 24px 0 rgba(76,205,196,0.18);
+}
+.order-form.button.confirm-orders {
+    background: linear-gradient(90deg, #ff6b6b 0%, #ffb88c 100%);
+    color: #fff;
+}
+.order-form.button.confirm-orders:hover {
+    background: linear-gradient(90deg, #ffb88c 0%, #ff6b6b 100%);
+    color: #fff;
+}
+/* Stile base per la pagina ordine */
+:root {
+    --primary-color: #4ecdc4;
+    --secondary-color: #1a535c;
+    --accent-color: #ff6b6b;
+    --text-color: #333;
+    --light-bg: #f7f9fc;
+    --shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.order-container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: #fff;
+    box-shadow: var(--shadow);
+    border-radius: 10px;
+    padding: 30px 40px;
+}
+
+.order-title {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.order-section {
+    margin-bottom: 35px;
+}
+
+.order-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+.order-table th, .order-table td {
+    border: 1px solid #e0e0e0;
+    padding: 10px 12px;
+    text-align: center;
+}
+.order-table th {
+    background: var(--light-bg);
+    color: var(--secondary-color);
+}
+
+.order-form label {
+    display: block;
+    margin-bottom: 6px;
+    color: var(--secondary-color);
+    font-weight: 500;
+}
+.order-form input, .order-form select {
+    width: 100%;
+    padding: 8px 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+.order-form .form-row {
+    display: flex;
+    gap: 20px;
+}
+.order-form .form-row > div {
+    flex: 1;
+}
+
+.order-form button {
+    background: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.order-form button:hover {
+    background: var(--secondary-color);
+}
+
+.saved-cards {
+    margin-bottom: 15px;
+}
+
+@media (max-width: 700px) {
+    .order-container {
+        padding: 15px 5px;
+    }
+    .order-form .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+}

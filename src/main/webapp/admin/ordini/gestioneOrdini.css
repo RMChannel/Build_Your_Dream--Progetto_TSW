@@ -1,0 +1,160 @@
+/* Stile coerente con gestioneUtenti, adattato per la tabella ordini */
+.gestione-ordini-table-container {
+    margin: 80px auto 0 auto;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0,31,63,0.13);
+    padding: 40px 38px 36px 38px;
+    font-family: 'Montserrat', 'Segoe UI', 'Poppins', 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+    overflow-x: auto; /* aggiungi overflow per la tabella */
+}
+
+/* Responsive table wrapper */
+.gestione-ordini-table-responsive {
+    width: 100%;
+    overflow-x: auto;
+}
+.gestione-ordini-title {
+    text-align: center;
+    font-size: 2.2em;
+    font-weight: 800;
+    color: #001f3f;
+    margin-bottom: 24px;
+    letter-spacing: 1px;
+}
+.ordini-search-form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 18px;
+    justify-content: flex-end;
+}
+.ordini-search-form label {
+    font-weight: 600;
+    color: #0074D9;
+}
+.ordini-search-form input[type="number"] {
+    padding: 7px 8px;
+    border: 1.5px solid #b3c6e7;
+    border-radius: 6px;
+    font-size: 1em;
+    background: #f5f8ff;
+    transition: border 0.18s;
+    width: 120px;
+}
+.ordini-search-form input[type="number"]:focus {
+    border: 1.5px solid #0074D9;
+    outline: none;
+}
+.ordini-search-form button[type="submit"] {
+    padding: 7px 18px;
+    font-size: 1em;
+    border-radius: 6px;
+    background: linear-gradient(90deg, #0074D9 60%, #005fa3 100%);
+    color: #fff;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,31,63,0.13);
+    transition: background 0.18s, transform 0.13s, box-shadow 0.18s;
+    letter-spacing: 0.5px;
+    outline: none;
+}
+.ordini-search-form button[type="submit"]:hover {
+    background: linear-gradient(90deg, #005fa3 60%, #0074D9 100%);
+    transform: scale(1.04);
+}
+.gestione-ordini-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    min-width: 900px; /* larghezza minima aggiornata */
+}
+.gestione-ordini-table th, .gestione-ordini-table td {
+    padding: 12px 10px;
+    border-bottom: 1px solid #e3eafc;
+    text-align: left;
+    font-size: 1.08em;
+    vertical-align: top;
+    white-space: nowrap;
+}
+.gestione-ordini-table th {
+    color: #0074D9;
+    font-weight: 700;
+    background: #e3eafc;
+}
+.gestione-ordini-table tr:last-child td {
+    border-bottom: none;
+}
+.gestione-ordini-table select {
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: 1.5px solid #b3c6e7;
+    background: #f5f8ff;
+    font-size: 1em;
+    transition: border 0.18s;
+}
+.gestione-ordini-table select:focus {
+    border: 1.5px solid #0074D9;
+    outline: none;
+}
+.gestione-ordini-table button[type="submit"] {
+    padding: 6px 14px;
+    font-size: 0.95em;
+    border-radius: 6px;
+    background: linear-gradient(90deg, #0074D9 60%, #005fa3 100%);
+    color: #fff;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,31,63,0.13);
+    transition: background 0.18s, transform 0.13s, box-shadow 0.18s;
+    letter-spacing: 0.5px;
+    outline: none;
+    margin-left: 6px;
+}
+.gestione-ordini-table button[type="submit"]:hover {
+    background: linear-gradient(90deg, #005fa3 60%, #0074D9 100%);
+    transform: translateY(-2px) scale(1.06);
+    box-shadow: 0 6px 20px rgba(0,31,63,0.18);
+}
+.gestione-ordini-table ul {
+    padding-left: 18px;
+    margin: 0;
+    list-style: disc;
+}
+.gestione-ordini-table ul li {
+    font-size: 0.98em;
+    margin-bottom: 2px;
+}
+/* Impedisci il wrapping del testo nell'ultima colonna */
+.gestione-ordini-table td:last-child,
+.gestione-ordini-table th:last-child {
+    white-space: nowrap;
+    min-width: 220px;
+}
+/* Responsive: su schermi piccoli rendi la tabella scorrevole */
+@media (max-width: 900px) {
+    .gestione-ordini-table-container {
+        padding: 18px 4px 16px 4px;
+        border-radius: 10px;
+    }
+    .gestione-ordini-table {
+        font-size: 0.98em;
+        min-width: 700px;
+    }
+    .gestione-ordini-table td:last-child, .gestione-ordini-table th:last-child {
+        min-width: 180px;
+    }
+}
+button:focus,
+button:focus-visible {
+    outline: 3px solid #005fcc;
+    outline-offset: 2px;
+}
+
+.back-icon {
+    vertical-align: middle;
+    margin-right: 6px;
+}

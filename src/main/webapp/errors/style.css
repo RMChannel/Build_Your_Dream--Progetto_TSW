@@ -1,0 +1,112 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0a1929;
+    color: #e0e6f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    padding: 30px;
+    background-color: #132f4c;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.8s ease-in;
+}
+
+h1 {
+    color: #66b2ff;
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.status-code {
+    font-size: 5rem;
+    color: #66b2ff;
+    font-weight: bold;
+    margin: 0;
+    text-shadow: 0 0 10px rgba(102, 178, 255, 0.3);
+}
+
+.message {
+    font-size: 1.5rem;
+    margin: 20px 0;
+    line-height: 1.5;
+}
+
+.emoji {
+    font-size: 5rem;
+    margin: 20px 0;
+    animation: bounce 2s infinite;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.btn {
+    background-color: #1976d2;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    margin: 10px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn:hover {
+    background-color: #2196f3;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(33, 150, 243, 0.3);
+}
+
+.fun-fact {
+    margin-top: 30px;
+    padding: 15px;
+    background-color: #193a5a;
+    border-radius: 8px;
+    font-style: italic;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@media (max-width: 600px) {
+    .status-code {
+        font-size: 3rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .message {
+        font-size: 1.2rem;
+    }
+}

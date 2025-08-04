@@ -1,0 +1,609 @@
+/* Stile tabella gestione headset admin */
+.admin-table-container {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 20px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    box-sizing: border-box;
+}
+
+.admin-table {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,31,63,0.08);
+    width: 100%;
+    min-width: 1200px;
+    margin: 32px auto;
+    border-collapse: collapse;
+}
+.admin-table th, .admin-table td {
+    padding: 10px 14px;
+    text-align: center;
+}
+.admin-table input[type="text"], .admin-table input[type="number"] {
+    width: 100%;
+    min-width: 120px;
+    max-width: 320px;
+    padding: 7px 12px;
+    border-radius: 6px;
+    border: 1px solid #b3c6e7;
+    background: #f5f8ff;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+.admin-btn {
+    background: #0074D9;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 16px;
+    margin: 0 2px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.18s;
+}
+.admin-btn.delete {
+    background: #ff4136;
+}
+.admin-btn:hover {
+    filter: brightness(1.08);
+}
+.admin-table, .admin-table th, .admin-table td, .admin-btn, .admin-table input[type="text"], .admin-table input[type="number"] {
+    font-family: 'Montserrat', 'Segoe UI', 'Poppins', 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.admin-title {
+    text-align: center;
+    margin-top: 24px;
+    margin-bottom: 18px;
+    font-size: 2.2em;
+    font-weight: 800;
+    color: #0074D9 !important;
+    letter-spacing: 1.5px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 38px;
+    box-shadow: 0 2px 12px rgba(0,31,63,0.08);
+    font-family: 'Montserrat', 'Segoe UI', 'Poppins', 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.admin-back-btns {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    margin: 18px 0 0 18px;
+    position: static;
+}
+
+.admin-back-btns-top,
+.admin-back-btns-bottom {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 18px;
+    margin-top: 0;
+}
+.admin-back-btns-bottom {
+    margin-top: 22px;
+    margin-bottom: 0;
+}
+
+.admin-back-btn-admin {
+    display: inline-block;
+    background: linear-gradient(90deg, #0074D9 60%, #001f3f 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 28px;
+    font-size: 1.08em;
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: 0 2px 12px rgba(0,31,63,0.13);
+    margin-bottom: 18px;
+    margin-top: 18px;
+    margin-left: 18px;
+    text-decoration: none;
+    transition: background 0.18s;
+}
+.admin-back-btn-admin:hover {
+    filter: brightness(1.08);
+}
+
+.admin-back-btn-accessori {
+    display: inline-block;
+    background: linear-gradient(90deg, #b3c6e7 60%, #e3eafc 100%);
+    color: #0074D9;
+    border: 2px solid #0074D9;
+    border-radius: 8px;
+    padding: 10px 28px;
+    font-size: 1.08em;
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: 0 2px 12px rgba(0,31,63,0.10);
+    margin-top: 28px;
+    margin-bottom: 18px;
+    margin-left: 236px;
+    text-decoration: none;
+    transition: background 0.18s, color 0.18s;
+}
+.admin-back-btn-accessori:hover {
+    background: #0074D9;
+    color: #fff;
+}
+
+.liquidCooling {
+    margin-left: 500px;
+}
+
+.airCooling {
+    margin-left: 680px;
+}
+
+.btn-admin-area {
+    margin-right: 18px;
+}
+
+.btn-accessori {
+    margin-left: 236px;
+}
+
+/* Marca, Modello e Prezzo più larghi */
+input[name="marca"], input[name="modello"], input[name="prezzo"] {
+    min-width: 180px;
+    max-width: 420px;
+}
+
+/* Pop-up nuovo headset */
+.popup-overlay { display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.4); z-index: 1000; align-items: center; justify-content: center; }
+.popup-overlay.active { display: flex; }
+.popup-content {
+  background: #fff; padding: 32px 24px; border-radius: 8px; min-width: 320px; position: relative;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.2);
+}
+.close-btn {
+  position: absolute; top: 8px; right: 12px; font-size: 1.5em; cursor: pointer;
+}
+.popup-content label { display: block; margin-bottom: 10px; }
+/* Miglioramento pop-up nuovo headset */
+.enhanced-popup {
+  background: linear-gradient(120deg, #e3eafc 60%, #b3c6e7 100%);
+  border-radius: 18px;
+  box-shadow: 0 6px 32px rgba(0,31,63,0.18);
+  padding: 38px 32px 32px 32px;
+  min-width: 380px;
+  max-width: 480px;
+  border: 2px solid #0074D9;
+  position: relative;
+  animation: popupIn 0.35s cubic-bezier(.4,2,.6,1) both;
+}
+@keyframes popupIn {
+  0% { transform: scale(0.85) translateY(40px); opacity: 0; }
+  100% { transform: scale(1) translateY(0); opacity: 1; }
+}
+.popup-content h3 {
+  color: #0074D9;
+  font-size: 1.6em;
+  font-weight: 700;
+  margin-bottom: 18px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+.popup-fields-row {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 20px;
+  align-items: flex-start;
+}
+
+/* Wrapper per campo form nel popup */
+.popup-field-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Label visibili nei popup */
+.popup-content label {
+  flex: none;
+  font-weight: 500;
+  color: #001f3f;
+  font-size: 0.9em;
+  margin-bottom: 4px;
+  display: block;
+  letter-spacing: 0.3px;
+}
+
+/* Override della classe visually-hidden solo nei popup */
+.popup-content label.visually-hidden {
+  position: static !important;
+  width: auto !important;
+  height: auto !important;
+  margin: 0 0 4px 0 !important;
+  padding: 0 !important;
+  overflow: visible !important;
+  clip: auto !important;
+  border: 0 !important;
+  display: block !important;
+  font-weight: 500;
+  color: #001f3f;
+  font-size: 0.9em;
+  letter-spacing: 0.3px;
+}
+.popup-content input[type="text"],
+.popup-content input[type="number"],
+.popup-content select {
+  width: 100%;
+  padding: 7px 10px;
+  border-radius: 6px;
+  border: 1.5px solid #b3c6e7;
+  background: #f5f8ff;
+  font-size: 1em;
+  margin-top: 4px;
+  margin-bottom: 2px;
+  transition: border 0.18s, box-shadow 0.18s;
+}
+.popup-content input[type="text"]:focus,
+.popup-content input[type="number"]:focus,
+.popup-content select:focus {
+  border: 1.5px solid #0074D9;
+  box-shadow: 0 0 0 2px #e3eafc;
+  outline: none;
+}
+.popup-content input[name="id"] {
+  font-weight: bold;
+  background: #e3eafc;
+  border: 1.5px solid #0074D9;
+  color: #0074D9;
+  letter-spacing: 1px;
+}
+.enhanced-btn {
+  background: linear-gradient(90deg, #0074D9 60%, #001f3f 100%);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.1em;
+  border-radius: 8px;
+  padding: 10px 32px;
+  margin-top: 18px;
+  box-shadow: 0 2px 12px rgba(0,31,63,0.13);
+  transition: background 0.18s, transform 0.18s;
+}
+.enhanced-btn:hover {
+  background: #005fa3;
+  transform: translateY(-2px) scale(1.04);
+}
+.popup-content, .popup-content * {
+  font-family: 'Montserrat', 'Segoe UI', 'Poppins', 'Roboto', Tahoma, Geneva, Verdana, sans-serif !important;
+}
+
+#random-id-btn {
+    margin-left: 10px;
+    padding: 7px 20px;
+    font-size: 1.08em;
+    background: linear-gradient(90deg, #39CCCC 60%, #0074D9 100%);
+    color: #fff;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: 700;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 10px rgba(57,204,204,0.13), 0 1.5px 0 #b3c6e7;
+    transition: background 0.18s, transform 0.12s, box-shadow 0.18s;
+    outline: none;
+    position: relative;
+    top: 2px;
+}
+#random-id-btn:hover {
+    background: linear-gradient(90deg, #0074D9 60%, #39CCCC 100%);
+    color: #fff;
+    transform: translateY(-2px) scale(1.04);
+    box-shadow: 0 4px 18px rgba(0,116,217,0.18);
+}
+#random-id-input {
+    width: 160px;
+    display: inline-block;
+    font-size: 1.08em;
+    border-radius: 7px;
+    border: 1.5px solid #39CCCC;
+    background: #e3eafc;
+    font-weight: bold;
+    color: #0074D9;
+    padding: 7px 12px;
+    margin-right: 2px;
+    transition: border 0.18s, box-shadow 0.18s;
+}
+#random-id-input:focus {
+    border: 2px solid #0074D9;
+    box-shadow: 0 0 0 2px #39CCCC33;
+}
+
+/* Fix per body e html */
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Container principale per evitare overflow */
+.main-content-wrapper {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+/* Wrapper per le pagine prodotto admin */
+.admin-product-page-wrapper {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    position: relative;
+}
+
+/* Fix per evitare scroll orizzontale */
+* {
+    box-sizing: border-box;
+}
+
+/* Rimuove margini negativi e posizionamenti assoluti problematici */
+.admin-table-container,
+.admin-title,
+.admin-back-btns {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    position: relative !important;
+}
+
+/* Fix per tabelle responsive */
+@media screen and (max-width: 1400px) {
+    .admin-table-container {
+        padding: 0 15px;
+        margin: 0 auto;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .admin-table {
+        font-size: 0.95em;
+    }
+    
+    .admin-table th, .admin-table td {
+        padding: 8px 10px;
+    }
+}
+
+/* Mobile responsive */
+@media screen and (max-width: 768px) {
+    .admin-table-container {
+        padding: 0 10px;
+        margin: 0 auto;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .admin-table {
+        font-size: 0.85em;
+        min-width: 800px;
+        margin: 20px auto;
+    }
+    
+    .admin-table th, .admin-table td {
+        padding: 6px 8px;
+    }
+    
+    .admin-table input[type="text"], 
+    .admin-table input[type="number"] {
+        min-width: 80px;
+        max-width: 150px;
+        padding: 5px 8px;
+        font-size: 0.9em;
+    }
+    
+    .admin-btn {
+        padding: 5px 10px;
+        font-size: 0.85em;
+        margin: 0 1px;
+    }
+    
+    .admin-title {
+        font-size: 1.5em;
+        padding: 8px 20px;
+        margin: 15px auto;
+    }
+    
+    .admin-back-btns {
+        flex-wrap: wrap;
+        gap: 10px;
+        margin: 10px;
+        padding: 0 10px;
+    }
+    
+    .admin-back-btn-admin,
+    .admin-back-btn-accessori {
+        font-size: 0.9em;
+        padding: 8px 15px;
+        margin: 5px;
+    }
+    
+    .admin-back-btn-accessori {
+        margin-left: 5px;
+    }
+    
+    .liquidCooling,
+    .airCooling {
+        margin-left: 5px;
+    }
+    
+    .btn-accessori {
+        margin-left: 5px;
+    }
+    
+    /* Nasconde colonne non essenziali su mobile */
+    .admin-table th:nth-child(n+10),
+    .admin-table td:nth-child(n+10) {
+        display: none;
+    }
+    
+    /* Mostra solo colonne essenziali */
+    .admin-table th:nth-child(1),
+    .admin-table td:nth-child(1),
+    .admin-table th:nth-child(2),
+    .admin-table td:nth-child(2),
+    .admin-table th:nth-child(3),
+    .admin-table td:nth-child(3),
+    .admin-table th:nth-child(4),
+    .admin-table td:nth-child(4),
+    .admin-table th:last-child,
+    .admin-table td:last-child {
+        display: table-cell;
+    }
+}
+
+/* Extra small devices */
+@media screen and (max-width: 480px) {
+    .admin-table-container {
+        padding: 0 5px;
+    }
+    
+    .admin-table {
+        font-size: 0.75em;
+        min-width: 600px;
+    }
+    
+    .popup-overlay {
+        padding: 10px;
+    }
+    
+    .enhanced-popup {
+        min-width: 290px;
+        max-width: 95vw;
+        padding: 20px 15px;
+    }
+    
+    .popup-fields-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    #random-id-btn {
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+    }
+    
+    #random-id-input {
+        width: 100%;
+    }
+}
+
+/* Stili aggiuntivi per accessibilità */
+.popup-content input[type="file"] {
+    width: 100%;
+    padding: 7px 10px;
+    border-radius: 6px;
+    border: 1.5px solid #b3c6e7;
+    background: #f5f8ff;
+    font-size: 0.9em;
+    margin-top: 4px;
+    margin-bottom: 2px;
+    transition: border 0.18s, box-shadow 0.18s;
+    cursor: pointer;
+}
+
+.popup-content input[type="file"]:focus,
+.popup-content input[type="file"]:hover {
+    border: 1.5px solid #0074D9;
+    box-shadow: 0 0 0 2px #e3eafc;
+    outline: none;
+}
+
+/* Miglioramento focus per accessibilità tastiera */
+.popup-content input:focus-visible,
+.popup-content select:focus-visible,
+.popup-content button:focus-visible {
+    outline: 3px solid #0074D9;
+    outline-offset: 2px;
+    box-shadow: 0 0 0 4px rgba(0, 116, 217, 0.1);
+}
+
+/* Stili per select nei popup */
+.popup-content select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2714%27%20height%3D%278%27%20viewBox%3D%270%200%2014%208%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%3E%3Cpath%20d%3D%27M1%201l6%206%206-6%27%20stroke%3D%27%230074D9%27%20stroke-width%3D%272%27%20fill%3D%27none%27%20fill-rule%3D%27evenodd%27%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 12px;
+    padding-right: 35px;
+}
+
+/* Wrapper per ID e pulsante RandomID */
+.id-field-wrapper {
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.id-field-wrapper .popup-field-wrapper {
+    flex: 1;
+}
+
+/* Animazione per il focus */
+@keyframes focusPulse {
+    0% {
+        box-shadow: 0 0 0 2px #e3eafc;
+    }
+    50% {
+        box-shadow: 0 0 0 4px #b3c6e7;
+    }
+    100% {
+        box-shadow: 0 0 0 2px #e3eafc;
+    }
+}
+
+.popup-content input:focus,
+.popup-content select:focus {
+    animation: focusPulse 2s infinite;
+}
+
+/* Indicatore di campo obbligatorio */
+.popup-content label.visually-hidden::after {
+    content: ' *';
+    color: #ff4136;
+    font-weight: bold;
+}
+
+/* Tooltip per aiuto */
+.popup-field-wrapper[data-tooltip] {
+    position: relative;
+}
+
+.popup-field-wrapper[data-tooltip]:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    background: #001f3f;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.8em;
+    white-space: nowrap;
+    z-index: 10;
+    margin-bottom: 5px;
+}
+

@@ -1,0 +1,86 @@
+/* Stile per la pagina "Le tue build" utente */
+.your-builds-container {
+    background: var(--light-bg);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    padding: 32px 32px 24px 32px;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+.your-builds-title {
+    color: var(--secondary-color);
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.your-builds-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.build-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    padding: 16px 20px;
+    transition: box-shadow 0.2s;
+}
+.build-item:hover {
+    box-shadow: 0 4px 16px rgba(78,205,196,0.13);
+}
+.build-name {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--secondary-color);
+    flex: 1;
+}
+.inline-form {
+    display: inline;
+    margin: 0 0 0 8px;
+}
+.btn {
+    border: none;
+    border-radius: 5px;
+    padding: 7px 16px;
+    font-size: 0.97rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+.builder-btn {
+    background: var(--primary-color);
+    color: #fff;
+    margin-right: 6px;
+}
+.builder-btn:hover {
+    background: var(--secondary-color);
+}
+.delete-btn {
+    background: var(--accent-color);
+    color: #fff;
+}
+.delete-btn:hover {
+    background: #d9534f;
+}
+.no-builds {
+    text-align: center;
+    padding: 40px 0 10px 0;
+    color: var(--text-color);
+}
+.go-builder-btn {
+    background: var(--primary-color);
+    color: #fff;
+    margin-top: 18px;
+    padding: 10px 28px;
+    font-size: 1.1rem;
+}
+.go-builder-btn:hover {
+    background: var(--secondary-color);
+}

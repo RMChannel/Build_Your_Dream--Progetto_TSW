@@ -1,0 +1,28 @@
+.header {
+    background-color: #9C27B0;  /* Colore viola distintivo */
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    border-radius: 4px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header h5 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.header a {
+    color: #FFD700;  /* Link in color oro per maggiore contrasto */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.header a:hover {
+    color: #FFF;
+    text-decoration: underline;
+}
