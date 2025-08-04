@@ -97,7 +97,7 @@ Il progetto è compatibile con **JUnit 5.11.0**, ma i test automatizzati non son
 
 ## 👨‍🎓 Autore
 
-Progetto sviluppato da **[Tuo Nome Cognome]**  
+Progetto sviluppato da **Cito Roberto / Chikviladze Aleksandre**  
 Corso di Tecnologie e Software per il Web  
 Anno Accademico 2024/2025
 
